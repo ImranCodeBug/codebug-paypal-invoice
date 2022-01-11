@@ -10,6 +10,11 @@
 /out
 
 # msbuild output directories
-/bin
-/obj
+/bin/
+/obj/
 /Solution
+/Codebug.PaypalTokenGenerator/.vs/Codebug.PaypalTokenGenerator/v16
+/Codebug.PaypalTokenGenerator/*/bin/
+/Codebug.PaypalTokenGenerator/*/obj/
+/Codebug.PaypalTokenGenerator/*/packages/
+/Codebug.PaypalTokenGenerator/packages
