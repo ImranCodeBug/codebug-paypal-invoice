@@ -8,7 +8,7 @@ export const MainComponent = (props: Props) => {
     //console.log(props.context);
     return (
         <div>
-            hello
+            <button type="button" className="btn btn-primary">Primary</button>
         </div>
     )
 }

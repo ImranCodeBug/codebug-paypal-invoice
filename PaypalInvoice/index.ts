@@ -1,6 +1,7 @@
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 import * as React from 'react';
 import * as ReactDom from 'react-dom'
+import { MainComponent } from "./Components/MainComponent";
 
 export class PaypalInvoice implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
@@ -39,8 +40,7 @@ export class PaypalInvoice implements ComponentFramework.StandardControl<IInputs
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
-		console.log(context);
-		console.log(context.parameters.Customer);
+		ReactDom.render(React.createElement(MainComponent, {context : context}), this._container);
 	}
 
 	/**
