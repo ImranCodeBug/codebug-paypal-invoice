@@ -2,6 +2,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 import * as React from 'react';
 import * as ReactDom from 'react-dom'
 import { MainComponent } from "./Components/MainComponent";
+import XrmConnectionFactory from "./Connectors/XrmConnetionFactory";
 
 export class PaypalInvoice implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
@@ -40,7 +41,12 @@ export class PaypalInvoice implements ComponentFramework.StandardControl<IInputs
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
-		ReactDom.render(React.createElement(MainComponent, {context : context}), this._container);
+		const xrmConnectionFactory = new XrmConnectionFactory(context.webAPI);
+		ReactDom.render(React.createElement(MainComponent, 
+			{
+				context : context,
+				xrmConnectionFactory : xrmConnectionFactory
+			}), this._container);
 	}
 
 	/**
@@ -58,6 +64,6 @@ export class PaypalInvoice implements ComponentFramework.StandardControl<IInputs
 	 */
 	public destroy(): void
 	{
-		// Add code to cleanup control if necessary
+		ReactDom.unmountComponentAtNode(this._container);
 	}
 }

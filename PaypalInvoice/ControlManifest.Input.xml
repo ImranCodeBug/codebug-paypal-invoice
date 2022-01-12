@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="Codebug" constructor="PaypalInvoice" version="0.0.8" display-name-key="PaypalInvoice" description-key="PaypalInvoice description" control-type="standard">
+  <control namespace="Codebug" constructor="PaypalInvoice" version="0.0.10" display-name-key="PaypalInvoice" description-key="PaypalInvoice description" control-type="standard">
     <external-service-usage enabled="false">
     </external-service-usage>
     <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
